@@ -1,0 +1,49 @@
+{
+  "name": "uzBot",
+  "version": "1.0.0",
+  "description": "Ukrzaliznytsia bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ticket",
+    "train",
+    "bot"
+  ],
+  "author": "Oleg Nosov <nosovoleg@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nosovoleg/uzBot.git"
+  },
+  "dependencies": {
+    "cron": "^1.2.1",
+    "dateformat": "^2.0.0",
+    "dotenv": "^6.0.0",
+    "node-telegram-bot-api": "^0.27.1",
+    "querystring": "^0.2.0",
+    "request": "^2.87.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "prettier": "^1.13.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "off"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": true
+  }
+}
