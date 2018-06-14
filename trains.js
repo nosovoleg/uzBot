@@ -41,15 +41,22 @@ const trains = async (from, to, date) =>
       const { statusCode, headers, body } = response;
 
       try {
+        // console.log(body)
         const dataJson = JSON.parse(body || '[]');
         resolve({
           duration: Math.round((end - start) * 1000),
           statusCode,
           headers,
           body: dataJson,
+          error: false,
         });
       } catch (errorJsonParse) {
-        throw new Error(errorJsonParse);
+        resolve({
+          duration: Math.round((end - start) * 1000),
+          statusCode,
+          body: 'Error Json Parse',
+          error: true,
+        });
       }
     });
   });
